@@ -1,0 +1,120 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".TipCalculatorActivity"
+    >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/billAmountLabel"
+        android:text="@string/bill_amount_label"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/percent_label"
+        android:id="@+id/percentLabel"
+        android:layout_below="@+id/billAmountLabel"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="53dp"
+        android:textStyle="bold"
+        android:textSize="20sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/tip_label"
+        android:id="@+id/tipLabel"
+        android:layout_below="@+id/percentLabel"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="59dp"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/total_label"
+        android:id="@+id/totalLabel"
+        android:layout_centerVertical="true"
+        android:layout_alignParentStart="true"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/percent_view"
+        android:id="@+id/percentTextView"
+        android:layout_alignBottom="@+id/percentLabel"
+        android:layout_centerHorizontal="true"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:ems="10"
+        android:id="@+id/billAmountEditText"
+        android:layout_alignParentTop="true"
+        android:layout_toEndOf="@+id/billAmountLabel" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/tip_view"
+        android:id="@+id/tipTextView"
+        android:layout_alignBottom="@+id/tipLabel"
+        android:layout_alignEnd="@+id/percentTextView"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/total_view"
+        android:id="@+id/totalTextView"
+        android:layout_alignBottom="@+id/totalLabel"
+        android:layout_alignStart="@+id/tipTextView"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <Button
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:text="@string/plus_button"
+        android:id="@+id/percentUpButton"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_alignTop="@+id/percentTextView"
+        android:layout_toEndOf="@+id/percentTextView"
+        android:layout_marginStart="41dp" />
+
+    <Button
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:text="@string/minus_button"
+        android:id="@+id/percentDownButton"
+        android:layout_alignTop="@+id/percentUpButton"
+        android:layout_toEndOf="@+id/percentUpButton"
+        android:textStyle="bold"
+        android:textSize="20sp" />
+
+    <Button
+        android:layout_width="100dp"
+        android:layout_height="45dp"
+        android:text="@string/reset_button"
+        android:id="@+id/resetButton"
+        android:layout_marginTop="65dp"
+        android:layout_below="@+id/totalTextView"
+        android:layout_centerHorizontal="true"
+        android:textStyle="bold"
+        android:textSize="20sp" />
+
+</RelativeLayout>
